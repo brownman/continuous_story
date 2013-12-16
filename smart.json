@@ -1,5 +1,6 @@
 {
   "packages": {
-    "streams": {}
+    "streams": {},
+    "bootstrap-3": {}
   }
 }

@@ -1,0 +1,111 @@
+<template name="chatTemplate">
+
+  {{> join }}
+
+  {{> dashboard }}
+
+
+
+
+  {{> messages }}
+
+
+
+</template>
+
+<!-- Main Chat Window
+<form>
+        <p>Say something:<input id="chatInput" /><input type="submit" value="Say it" /></p>
+</form>
+<template name='mainBox'>
+  <div class='container  hero-unit navbar navbar-inverse navbar-fixed-top'>
+
+
+<p>Enter a user name: <input id="userName" type="text" value="" /></p>
+
+{{#each messages}}<pre>{{userName}}: {{message}}</pre>{{/each}}
+
+
+  {{time}}  <strong>{{name}}:</strong> {{message}}<br>
+
+
+
+
+
+
+
+  </div>
+</template>
+
+  -->
+
+<!-- Chat Box with chat messages and the input box -->
+<template name='chatBox'>
+  <div id='messages'>
+    {{#each messages}}
+      {{>chatMessage}}
+    {{/each}}
+  </div>
+  <textarea id='chat-message'></textarea><br>
+  <button class='btn btn-primary' id='send'>Send Chat</button>
+</template>
+
+<!-- Template for the individual chat message -->
+<template name='chatMessage'>
+  <div>
+    <b>{{user}}:</b> {{message}}
+  </div>
+</template>
+
+
+<template name="join">
+  <div id="lobby">
+    {{#if show}}
+      {{#if users.count}}
+        <h1>{{ users.count }} other users are in the room:</h1>
+        <ul>
+        {{#each users}}
+          <li>{{name}}</div>
+        {{/each}}
+        </ul>
+      {{/if}}
+
+      <input id="name" type="text" placeholder="Your name"/>
+      <button id="join" class="btn">Join</button>
+    {{/if}}
+  </div>
+</template>
+
+<template name="messages">
+<div style="border: 1px solid; padding: 10px; overflow-y: scroll; height: 550px; width: 80%">
+
+<div id="messages1">
+  {{#each messages}}
+<p>{{name}}: {{message}}</p>
+  {{/each}}
+</div>
+
+</div>
+</template>
+
+<template name="dashboard">
+  <div id="dashboard">
+    {{#if show}}
+      <h4>My name: {{me.name}}</h4>
+      <h3>Users online:</h3>
+
+      <div id="receivers" style="margin-bottom: 10px;">
+        <div><input id="sendToAll" type="checkbox" checked/><strong>All</strong></div>
+        {{#each users}}
+        <div>
+          <input type="checkbox" name="target" value="{{_id}}">{{name}}</input>
+        </div>
+        {{/each}}
+      </div>
+
+      <input type="text" id="message" size="30" placeholder="Enter your message"/>
+<button class="btn btn-primary" id="send">call others</button>
+    {{/if}}
+  </div>
+</template>
+

@@ -2,13 +2,19 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "streams": {}
+      "streams": {},
+      "bootstrap-3": {}
     },
     "packages": {
       "streams": {
         "git": "https://github.com/arunoda/meteor-streams.git",
-        "tag": "v0.1.14",
-        "commit": "ef38fb1d96efb775b280374024f8d7ed0974d849"
+        "tag": "v0.1.17",
+        "commit": "9fcbbc9b7bf542827babc92089c19e730892a22f"
+      },
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v0.3.7",
+        "commit": "5dd0d142c870647b910be80bc777b96f0dd45e5e"
       }
     }
   }
