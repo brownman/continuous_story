@@ -54,13 +54,18 @@ if (name != '') {
 		});
         }
 else{
+
 alert('invalid name');
 }
 
 	}
 });
 Template.messages.messages = function () {
-  return Messages.find({}, { sort: { createdAt: -1 }});
+  /*
+   *return Messages.find({}, { sort: { createdAt: -1 }});
+   */
+
+  return Messages.find({}, { sort: { createdAt: -1 },  limit: 20 });
 
   /*
    *return Messages.find({}, { sort: { createdAt: -1 }},  limit: 20);
@@ -120,7 +125,7 @@ document.getElementById('message').value = '';
 		var message = $('#dashboard input#message').val().trim();
 		var receivers = UI.getReceivers() || SEND_TO_ALL_ID;
 		console.log('[Sending message] to: [' + receivers + ']; message: ' + message);
-
+alert(Messages.length);
 	
            
 

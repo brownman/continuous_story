@@ -54,13 +54,22 @@ if (name != '') {
 		});
         }
 else{
+
 alert('invalid name');
 }
 
 	}
 });
 Template.messages.messages = function () {
-  return Messages.find({}, { sort: { createdAt: -1 }},  limit: 20);
+  /*
+   *return Messages.find({}, { sort: { createdAt: -1 }});
+   */
+
+  return Messages.find({}, { sort: { createdAt: -1 },  limit: 20 });
+
+  /*
+   *return Messages.find({}, { sort: { createdAt: -1 }},  limit: 20);
+   */
 }
 Template.dashboard.show = function() {
 	return user();

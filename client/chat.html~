@@ -1,13 +1,18 @@
 <template name="chatTemplate">
 
-  {{> join }}
+
+
+
+
 
   {{> dashboard }}
 
 
-
-
   {{> messages }}
+
+  {{> join }}
+
+
 
 
 
