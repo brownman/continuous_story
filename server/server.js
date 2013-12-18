@@ -18,31 +18,43 @@ ChatStream.permissions.read(function() {
 });
 
 Meteor.methods({
-    addMessage2 : function (newMessage) {
+    addMessage3 : function (newMessage) {
+/*
+ *
 
-        if (newMessage.userName == "") {
+        if (newMessage.name == "") {
             throw new Meteor.Error(413, "Missing a user name...");
         }
+
+ * */
         if (newMessage.message == "") {
             throw new Meteor.Error(413, "Missing message content...");
         }
+newMessage.time = Date.now(); 
         var id = Messages.insert(newMessage);
 
         var cursor = Messages.find();
-        if (cursor.count() > 20) {
+        var length=cursor.count() 
+    console.log(length);
+/*
+ *
+ 
+        if (length > 20) {
             var oldestMessage = Messages.findOne();
             Messages.remove(oldestMessage);
         }
+
+ * */
 
         return id;
     },
 
 
-    addMessage1: function(room_name, message) {
+    addMessage: function( obj) {
         Messages.insert({
-            userId: this.userId,
-        message: message,
-        created_on: new Date().getTime()
+            name: obj.name,
+        message: obj.message,
+        time: new Date().getTime()
         });
     },
     joinRoom: function(name) {
@@ -60,6 +72,9 @@ Meteor.methods({
 });
 
 Meteor.setInterval(function () {
+//#    
+//#  var date = (new Date());
+//#    date.setSeconds(date.getSeconds() + 10);
     var now = new Date().getTime();
     var idle_threshold = now - 60 * 1000; // 1 minute
 

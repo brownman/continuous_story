@@ -4,27 +4,24 @@ Messages = new Meteor.Collection('messages');
 ChatStream = new Meteor.Stream('chat');
 
 const SEND_TO_ALL_ID = '_all_';
-function get_time(){
-var today=new Date();
-var h=today.getHours();
-var m=today.getMinutes();
-var s=today.getSeconds();
-// add a zero in front of numbers<10
-m=checkTime(m);
-s=checkTime(s);
 
-var clock1=h+":"+m+":"+s;
-return clock1
+var add_msg = function(message){
+    
+ var ret=Meteor.call("addMessage", message, function(error, message) {
+        /*
+         *Session.set("user_id", user_id);
+         */
+     console.log('add message successfuly');
+    });
+ console.log(ret);
+document.getElementById('message').value = '';
+        /*
+         *message.value = '';
+         */
+            /*
+             *Messages.insert(message);
+             */
 }
-function checkTime(i)
-{
-if (i<10)
-  {
-  i="0" + i;
-  }
-return i;
-}
-
 var me = function() {
 	return Session.get('me');
 };
@@ -65,7 +62,11 @@ Template.messages.messages = function () {
    *return Messages.find({}, { sort: { createdAt: -1 }});
    */
 
-  return Messages.find({}, { sort: { createdAt: -1 },  limit: 20 });
+
+return Messages.find({}, { sort: { time: -1 },  limit: 14 });
+  /*
+   *return Messages.find({} );
+   */
 
   /*
    *return Messages.find({}, { sort: { createdAt: -1 }},  limit: 20);
@@ -99,22 +100,21 @@ Template.dashboard.events({
 	//	var receivers = UI.getReceivers() || SEND_TO_ALL_ID;
 //		console.log('[Sending message] to: [' + receivers + ']; message: ' + message);
 
-		if (message.length) {
+		if (message) {
           var  obj1={
           message: message,
           name: me().name,
-          createdAt: new Date()
+           time: 0
         };
-          console.log(obj1);
          
-           Messages.insert(obj1);
-           console.log(Messages);
+           /*
+            *Messages.insert(obj1);
+            */
+          add_msg(obj1);
   
            
 
 		//  ChatStream.emit('message', { from: me().name, to: receivers, message: message });
-document.getElementById('message').value = '';
-        message.value = '';
 		}
 
   }
@@ -125,13 +125,12 @@ document.getElementById('message').value = '';
 		var message = $('#dashboard input#message').val().trim();
 		var receivers = UI.getReceivers() || SEND_TO_ALL_ID;
 		console.log('[Sending message] to: [' + receivers + ']; message: ' + message);
-alert(Messages.length);
 	
            
 
 
 
-	if (message.length) {
+	if (message) {
 
 		  ChatStream.emit('message', { from: me().name, to: receivers, message: message });
 
@@ -139,12 +138,12 @@ message='-----' + message
           var  obj1={
           message: message,
           name: me().name,
-          createdAt: new Date()
+           time: 0
         };
          
-           Messages.insert(obj1);
-document.getElementById('message').value = '';
-        message.value = '';
+          
+add_msg(obj1);
+
   
 		}
 }
@@ -177,3 +176,28 @@ Meteor.startup(function () {
     }
   }, 20 * 1000);
 });
+ Template.messages.formatted_date = function(date) {
+      var date = new Date(date);
+      date.setMinutes(date.getMinutes() - date.getTimezoneOffset());
+
+      var hours = date.getUTCHours(),
+          minutes = date.getUTCMinutes(),
+          suffix = "AM";
+
+      if (hours >= 12) {
+        suffix = "PM";
+        hours -= 12;
+      }
+
+      if (hours == 0) {
+        hours = 12;
+      }
+
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+
+
+          var str=new String(hours + ":" + minutes + " " + suffix);
+          return str;
+  };

@@ -82,12 +82,24 @@
   </div>
 </template>
 
+
+
+
 <template name="messages">
 <div style="border: 1px solid; padding: 10px; overflow-y: scroll; height: 550px; width: 80%">
 
 <div id="messages1">
   {{#each messages}}
-<p>{{name}}: {{message}}</p>
+
+
+     <div>
+             
+             <span class="time">{{formatted_date time }}</span>
+             <span class="user">&lt;{{name}}&gt;</span>
+          <span class="msg">{{message}}</span>
+          <div class='clearfix' />
+        </div>
+
   {{/each}}
 </div>
 
