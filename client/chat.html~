@@ -6,11 +6,14 @@
 
   {{> join }}
 
+
   {{> dashboard }}
+
 
 
   {{> messages }}
 
+{{> random }}
 
 
 
@@ -19,6 +22,10 @@
 
 </template>
 
+<template name="random">
+<div id="commandlinefu_list"></div>
+         
+</template>
 <!-- Main Chat Window
 <form>
         <p>Say something:<input id="chatInput" /><input type="submit" value="Say it" /></p>
@@ -94,7 +101,7 @@
 
      <div>
              
-             <span class="time">{{formatted_date date }}</span>
+             <span class="time">{{formatted_date time }}</span>
              <span class="user">&lt;{{name}}&gt;</span>
           <span class="msg">{{message}}</span>
           <div class='clearfix' />

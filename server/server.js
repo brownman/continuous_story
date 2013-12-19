@@ -75,9 +75,36 @@ Meteor.setInterval(function () {
 //#    
 //#  var date = (new Date());
 //#    date.setSeconds(date.getSeconds() + 10);
-    var now = new Date().getTime();
-    var idle_threshold = now - 60 * 1000; // 1 minute
+    /*
+     *var now = new Date().getTime();
+     */
 
-    Users.remove({last_keepalive: { $lt: idle_threshold }});
+  var now = (new Date()).getTime();
+
+    var idle_threshold = now - 600 * 1000; // 10 minute
+    /*
+     *var idle_threshold = now - 600 * 10; // 0.10 minute
+     */
+
+    
+     Users.remove({last_keepalive: { $lt: idle_threshold }});
+     
+    
 }, 30 * 1000);
+/*
+ *
 
+Meteor.setInterval(function () {
+  var now = (new Date()).getTime();
+  var idle_threshold = now - 70*1000; // 70 sec
+  var remove_threshold = now - 60*60*1000; // 1hr
+
+  Players.update({last_keepalive: {$lt: idle_threshold}},
+                 {$set: {idle: true}});
+
+  // XXX need to deal with people coming back!
+  // Players.remove({$lt: {last_keepalive: remove_threshold}});
+
+}, 30*1000);
+
+ * */
