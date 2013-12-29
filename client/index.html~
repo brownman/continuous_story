@@ -10,9 +10,11 @@
         {{> chatTemplate }}
 <footer>
         <p>using: <a href="http://www.meteor.com">meteor</a> platform.</p>
-        <p>Source code <a href="http://github.com/brownman">available</a> on GitHub.</p>
 
-
+        <p>Source code <a href="https://github.com/brownman/meteor-chat">available</a> on GitHub.</p>
+        <iframe width="95%" src="https://groups.google.com/forum/?fromgroups#!forum/advance-linux"></iframe>
+            
+        
 
 </footer>
 
