@@ -11,7 +11,7 @@
 
   {{> messages }}
 
-
+  {{> instructions }}
 
 
 
@@ -19,7 +19,13 @@
 
 </template>
 
-<!-- Main Chat Window
+<!-- oMain Chat Window
+	<div class="moon"></div>
+    
+        <div class="clouds_one"></div>
+
+        <div class="clouds_two"></div>
+
 <form>
         <p>Say something:<input id="chatInput" /><input type="submit" value="Say it" /></p>
 </form>
@@ -83,10 +89,15 @@
 </template>
 
 
-
-
 <template name="messages">
-<div style="border: 1px solid; padding: 10px; overflow-y: scroll; height: 550px; width: 80%">
+
+
+
+
+   <div class="sky">
+    	
+    
+        <div class="clouds_three"></div>
 
 <div id="messages1">
   {{#each messages}}
@@ -101,10 +112,11 @@
         </div>
 
   {{/each}}
-</div>
 
+    </div>
 </div>
 </template>
+
 
 <template name="dashboard">
   <div id="dashboard">
@@ -121,9 +133,20 @@
         {{/each}}
       </div>
 
-      <input type="text" id="message" size="30" placeholder="Enter your message"/>
+      <input type="text" id="message" size="80" placeholder="Enter Your Message"/>
+
 <button class="btn btn-primary" id="send">call others</button>
+    
+
     {{/if}}
   </div>
 </template>
+
+<template name="instructions">
+<h1>how to send messages ?</h1>
+  <p>pressing enter -> silent message</p>
+      <p>pressing button -> noisy message</p>
+
+</template>
+
 

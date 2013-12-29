@@ -1,22 +1,39 @@
 <head>
-
         <title>advance-linux</title>
 
 </head>
 <body>
 
+        <p align='center'><a href="https://groups.google.com/forum/?fromgroups#!forum/advance-linux">Add Your Question here </a> </p>
+
+        <p align='center'>LPI Exams <a href="http://www.lpi.org/linux-certifications/taking-exams">available</a>  </p>
         <h1>advance-linux</h1>
 
-        {{> chatTemplate }}
-<footer>
-        <p>using: <a href="http://www.meteor.com">meteor</a> platform.</p>
-
-        <p>Source code <a href="https://github.com/brownman/meteor-chat">available</a> on GitHub.</p>
-        <iframe width="95%" src="https://groups.google.com/forum/?fromgroups#!forum/advance-linux"></iframe>
-            
         
+
+
+
+        {{> chatTemplate }}
+
+
+<footer>
+    <h1>links:</h1> 
+        <p>Source code <a href="https://github.com/brownman/meteor-chat">available</a> on GitHub</p>
+        <p>using: <a href="http://www.meteor.com">meteor</a> platform</p>
+        <p>examples: <a href="http://madewith.meteor.com">meteor</a> platform</p>
+        <p>CSS <a href="http://codepen.io">available</a> on coderpen </p>
+        <p>FAQ <a href="https://github.com/brownman/magnify_the_small/blob/develop/data/yaml/url.yaml">available</a> on github </p>
+
+        <p>Compile Online <a href="http://www.compileonline.com/execute_bash_online.php">available</a> on github </p>
+
+        <p>Boot process <a href="https://github.com/SamyPesse/How-to-Make-a-Computer-Operating-System">available</a> on github </p>
+
+        <p>Kernel <a href="http://en.wikipedia.org/wiki/Kernel">available</a>  </p>
+
+        
+
+
 
 </footer>
 
 </body>
-

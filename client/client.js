@@ -63,7 +63,7 @@ Template.messages.messages = function () {
    */
 
 
-return Messages.find({}, { sort: { time: -1 },  limit: 14 });
+return Messages.find({}, { sort: { time: -1 },  limit: 34 });
   /*
    *return Messages.find({} );
    */
