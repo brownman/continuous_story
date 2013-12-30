@@ -18,7 +18,9 @@
 
 <footer>
     <h1>links:</h1> 
+
         <p>Source code <a href="https://github.com/brownman/meteor-chat">available</a> on GitHub</p>
+        <p>Source code 2 <a href="https://github.com/zquestz/simplechat/blob/master/simplechat.js">available</a> on GitHub</p>
         <p>using: <a href="http://www.meteor.com">meteor</a> platform</p>
         <p>examples: <a href="http://madewith.meteor.com">meteor</a> platform</p>
         <p>CSS <a href="http://codepen.io">available</a> on coderpen </p>

@@ -93,7 +93,6 @@
 
 
 
-<div style=" border: 1px solid; padding: 10px; overflow-y: scroll; height: 550px; width: 80%">
 
    <div class="sky">
     	
@@ -113,7 +112,6 @@
         </div>
 
   {{/each}}
-</div>
 
     </div>
 </div>

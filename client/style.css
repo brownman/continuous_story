@@ -218,3 +218,12 @@ html,body {
 				left:-200%
 			}
 		}
+body {
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  background-color: black;
+  color: #1EFF00;
+  }
+
+.nodisplay {
+  display: none;
+  }
