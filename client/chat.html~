@@ -100,11 +100,10 @@
 
 
 
-  <div>
              <span class="time">{{formatted_date time }}-</span><!--
              --><span class="user">{{name}}@</span><!--
              --><span class="group">hackeru:</span><!--
-             --><span class="question">{{question}}</span><!--
+             --><span class="path">/home/{{name}}</span><!--
              --><span class="msg">$ {{message}}</span>
           <div class='clearfix' />
 

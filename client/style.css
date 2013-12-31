@@ -1,6 +1,10 @@
+ .blacky{
+  background-color: black;
+  }
+
 html,body {
 			margin:0;
-			height:100%
+  background-color: black;
 		}
 		
 		.sky {
@@ -220,7 +224,7 @@ html,body {
 		}
 .footer {
   font-family: Monaco, Consolas, "Lucida Console", monospace;
-  background-color: white;
+  background-color:black;
 
   color: #0000aF;
   }
@@ -235,7 +239,13 @@ html,body {
 
 .instructions {
   font-family: Monaco, Consolas, "Lucida Console", monospace;
-  background-color: gray;
+  background-color: black;
+  color: #aFFFaF;
+  }
+
+.top {
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  background-color: black;
   color: #aFFFaF;
   }
 
@@ -254,3 +264,5 @@ html,body {
   .user{
   color: gray;
   }
+
+ 

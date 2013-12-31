@@ -1,34 +1,15 @@
 <head>
         <title>Advance-Linux</title>
-
 </head>
 <body>
-
-
-
-
-        <div class="sky">
-        
-
-
-            
+    <div class='top'>
 
         <h1 align='center'>advance-linux</h1>
-
-            <div  class="clouds_three">
-
-            </div>
-        </div>
-
-
         <p align='center'><a href="https://groups.google.com/forum/?fromgroups#!forum/advance-linux">Add Your Question here </a> </p>
         <p align='center'>LPI Exams <a href="http://www.lpi.org/linux-certifications/taking-exams">available</a>  </p>
-
-        
-
-
-
         {{> chatTemplate }}
+
+    </div>
 
 
 <footer class='footer'>
@@ -52,11 +33,13 @@
         <p>Kernel <a href="http://en.wikipedia.org/wiki/Kernel">available</a>  </p>
         <p>MindMap <a href="http://drichard.org/mindmaps/#">available</a>  </p>
 
+        <!--
         
-        <textarea>
+        
         http://www.maketecheasier.com/8-useful-and-interesting-bash-prompts/
+        --> 
+
         
-        </textarea>
 
 
 </footer>

@@ -81,7 +81,7 @@ Meteor.setInterval(function () {
 
   var now = (new Date()).getTime();
 
-    var idle_threshold = now - 60 * 60 * 1000; // 10 minute
+    var idle_threshold = now - 60 * 10 * 1000; // 10 minute
     /*
      *var idle_threshold = now - 600 * 10; // 0.10 minute
      */
