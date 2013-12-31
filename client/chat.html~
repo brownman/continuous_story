@@ -94,27 +94,25 @@
 
 
 
-   <div class="sky">
-    	
-    
-        <div class="clouds_three"></div>
 
 <div id="messages1">
   {{#each messages}}
 
 
-     <div>
-             
-             <span class="time">{{formatted_date time }}</span>
-             <span class="user">&lt;{{name}}&gt;</span>
-          <span class="msg">{{message}}</span>
+
+  <div>
+             <span class="time">{{formatted_date time }}-</span><!--
+             --><span class="user">{{name}}@</span><!--
+             --><span class="group">hackeru:</span><!--
+             --><span class="question">{{question}}</span><!--
+             --><span class="msg">$ {{message}}</span>
           <div class='clearfix' />
-        </div>
+
 
   {{/each}}
 
-    </div>
-</div>
+     <div>
+
 </template>
 
 
@@ -143,10 +141,15 @@
 </template>
 
 <template name="instructions">
+<div class="instructions">
+
+
+
 <h1>how to send messages ?</h1>
   <p>pressing enter -> silent message</p>
       <p>pressing button -> noisy message</p>
 
+</div>
 </template>
 
 

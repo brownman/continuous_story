@@ -218,12 +218,39 @@ html,body {
 				left:-200%
 			}
 		}
-body {
+.footer {
   font-family: Monaco, Consolas, "Lucida Console", monospace;
+  background-color: white;
+
+  color: #0000aF;
+  }
+
+  #messages1 {
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
   background-color: black;
-  color: #1EFF00;
+
+
+  color: #FFFFFF;
+  }
+
+.instructions {
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  background-color: gray;
+  color: #aFFFaF;
   }
 
 .nodisplay {
   display: none;
+  }
+  .group{
+  color: #F002CF;
+  }
+  .path{
+  color: gray;
+  }
+  .time{
+  color: purple;
+  }
+  .user{
+  color: gray;
   }
