@@ -1,6 +1,6 @@
 meteor-chat
 a code snippets composition
-
+![screenshot](./screenshot.png)
 
 features:
 -----
