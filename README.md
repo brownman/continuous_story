@@ -9,8 +9,9 @@ Features:
 
 Note
 ==
-- open your speaker and login using 2 different users - to fully understand the concept.
-
+- open your speaker 
+- log-in using 2 different users 
+- start talking to yourself (for a limited time)
 
 
 ![screenshot](./screenshot.png)
